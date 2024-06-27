@@ -1,7 +1,6 @@
 import Header from './_components/header';
 import Search from './_components/search';
 import CategoryList from './_components/category-list';
-import Image from 'next/image';
 import ProductList from './_components/products-list';
 import { Button } from './_components/ui/button';
 import { ChevronRightIcon } from 'lucide-react';
