@@ -5,8 +5,8 @@ import { MenuIcon } from "lucide-react";
 const Header = () => {
     return ( 
     <div className="flex justify-between pt-6 px-5">
-        <Image src="logo.png" alt="Logo Food" width={30} height={100}/>
-        <Button size="icon" variant="outline" className="bg-transparent">
+        <Image src="/logo.png" alt="Logo Food" width={100} height={30}/>
+        <Button size="icon" variant="outline" className="bg-transparent border-none">
             <MenuIcon />
         </Button>
     </div> 
