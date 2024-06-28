@@ -40,7 +40,6 @@ const ProductItem = ({ product }: ProductItemProps) => {
           <h2 className="text-sm truncate">{product.name}</h2>
           <div className="flex gap-1 items-center">
             <h3 className="font-semibold">
-              R$
               {formatCurrency(calculateProductTotalPrice(product))}
             </h3>
 
