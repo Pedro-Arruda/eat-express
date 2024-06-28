@@ -43,7 +43,7 @@ const ProductDetails = ({
     });
 
   return (
-    <div className="py-5 relative rounded-tl-3xl mt-[-1.5rem] z-50 bg-white">
+    <div className="py-5 relative rounded-t-3xl mt-[-1.5rem] z-50 bg-white">
       <div className="flex items-center gap-[0.375rem] px-5">
         <div className="relative h-6 w-6">
           <Image
