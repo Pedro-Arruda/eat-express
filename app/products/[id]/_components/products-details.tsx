@@ -136,7 +136,7 @@ const ProductDetails = ({
       </div>
 
       <div className="mt-6 px-5">
-        <Button>Adicionar á sacola</Button>
+        <Button className="w-full font-semibold">Adicionar á sacola</Button>
       </div>
     </div>
   );
