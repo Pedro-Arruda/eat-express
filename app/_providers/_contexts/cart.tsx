@@ -99,6 +99,12 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     }>,
     quantity: number
   ) => {
+    const hasDifferenceRestaurantProduct = products.some(
+      (cartProduct) => cartProduct.restaurantId !== product.restaurantId
+    );
+
+    if (hasDifferenceRestaurantProduct) setProducts([]);
+
     const isProductAlreadyOnCart = products.some(
       (cartProduct) => cartProduct.id === product.id
     );
