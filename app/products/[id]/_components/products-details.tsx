@@ -8,8 +8,13 @@ import { Button } from '@/app/_components/ui/button';
 import ProductList from '@/app/_components/products-list';
 import DeliveryInfo from '@/app/_components/deliveryInfo';
 import DiscountBadge from '@/app/_components/discount-badge';
-import { CartContext } from '@/app/_providers/_contexts/card';
-import { Sheet, SheetContent } from '@/app/_components/ui/sheet';
+import { CartContext } from '@/app/_providers/_contexts/cart';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+} from '@/app/_components/ui/sheet';
 import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
 import {
   calculateProductTotalPrice,
@@ -44,7 +49,7 @@ const ProductDetails = ({
     });
 
   const handleAddToCartClick = () => {
-    addProductToCart(product);
+    addProductToCart(product, quantity);
     setIsCartOpen(true);
   };
 
@@ -127,7 +132,10 @@ const ProductDetails = ({
       </div>
 
       <Sheet open={isCartOpen} onOpenChange={setIsCartOpen}>
-        <SheetContent>
+        <SheetContent className="w-[90vw]">
+          <SheetHeader>
+            <SheetTitle className="text-left">Sacola</SheetTitle>
+          </SheetHeader>
           <Cart />
         </SheetContent>
       </Sheet>
