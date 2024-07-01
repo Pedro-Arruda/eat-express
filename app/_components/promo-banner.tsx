@@ -1,7 +1,5 @@
 import Image, { ImageProps } from 'next/image';
 
-interface PromoBannerProps {}
-
 const PromoBanner = (props: ImageProps) => {
   return (
     <Image

@@ -139,20 +139,6 @@ const ProductDetails = ({
           <h3 className="font-semibold">Sobre</h3>
           <p className="tex-sm text-muted-foreground">{product.description}</p>
         </div>
-
-        <div className="mt-6 space-y-3">
-          <h3 className="font-semibold px-5">Sucos</h3>
-          <ProductList products={complementaryProducts} />
-        </div>
-
-        <div className="mt-6 px-5">
-          <Button
-            className="w-full font-semibold"
-            onClick={handleAddToCartClick}
-          >
-            Adicionar á sacola
-          </Button>
-        </div>
       </div>
 
       <Sheet open={isCartOpen} onOpenChange={setIsCartOpen}>

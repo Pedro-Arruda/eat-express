@@ -5,14 +5,14 @@ import Link from 'next/link';
 
 const Header = () => {
   return (
-    <div className="flex justify-between pt-6 px-5">
+    <div className="flex justify-between pt-6 p-5 container">
       <Link href="/" className="relative h-[30px] w-[100px]">
         <Image src="/logo.png" alt="Logo Food" fill className="object-cover" />
       </Link>
       <Button
         size="icon"
         variant="outline"
-        className="bg-transparent border-none"
+        className="bg-transparent border-none md:hidden"
       >
         <MenuIcon />
       </Button>

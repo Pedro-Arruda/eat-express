@@ -16,7 +16,7 @@ const ProductImage = ({ product }: ProductImageProps) => {
   const handleBackClick = () => router.back();
 
   return (
-    <div className="relative w-full h-[360px]">
+    <div className="relative w-full h-[360px] md:min-h-[500px]  md:min-w-[500px]">
       <Image
         src={product.imageUrl}
         alt={product.name}

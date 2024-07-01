@@ -12,7 +12,7 @@ interface ProductListPros {
 
 const ProductList = ({ products }: ProductListPros) => {
   return (
-    <div className="flex overflow-x-scroll [&::-webkit-scrollbar]:hidden gap-4 px-5">
+    <div className="flex overflow-x-scroll [&::-webkit-scrollbar]:hidden gap-4 px-5 ">
       {products.map((product) => (
         <ProductItem key={product.id} product={product} />
       ))}

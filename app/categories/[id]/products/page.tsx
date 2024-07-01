@@ -12,7 +12,7 @@ interface CategoriesPageProps {
 const CategoriesPage = async ({ params: { id } }: CategoriesPageProps) => {
   const category = await db.category.findUnique({
     where: { id },
-    include: { products: { include: { restaurant: true } } },
+    include: { products: { include: { restaurant: true }, take: 15 } },
   });
 
   if (!category) notFound();
@@ -20,12 +20,17 @@ const CategoriesPage = async ({ params: { id } }: CategoriesPageProps) => {
   return (
     <>
       <Header />
-      <div className="py-6 px-5">
-        <h2 className="text-lg font-semibold mb-6">{category.name}</h2>
-        <div className="grid grid-cols-2 gap-6">
-          {category.products.map((product) => (
-            <ProductItem product={product} className="min-w-full" />
-          ))}
+      <div className="md:container">
+        <div className="py-6 px-5">
+          <h2 className="text-lg font-semibold mb-6">{category.name}</h2>
+          <div className="grid grid-cols-2 gap-6 md:flex md:flex-wrap md:justify-center">
+            {category.products.map((product) => (
+              <ProductItem
+                product={product}
+                className="min-w-full md:min-w-[200px]"
+              />
+            ))}
+          </div>
         </div>
       </div>
     </>
