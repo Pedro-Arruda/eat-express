@@ -27,6 +27,7 @@ const CategoriesPage = async ({ params: { id } }: CategoriesPageProps) => {
             {category.products.map((product) => (
               <ProductItem
                 product={product}
+                key={product.id}
                 className="min-w-full md:min-w-[200px]"
               />
             ))}

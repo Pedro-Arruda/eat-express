@@ -35,6 +35,7 @@ const Restaurants = () => {
           {restaurants.map((restaunt) => (
             <RestaurantItem
               restaurant={restaunt}
+              key={restaunt.id}
               className="min-w-full max-w-full"
             />
           ))}
