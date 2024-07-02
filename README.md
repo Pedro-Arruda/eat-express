@@ -5,7 +5,7 @@
 </div>
 
 <h3 align="center" style='margin-bottom: 32px'>
- App utilizing React and Node.js/Express to facilitate spaced repetition learning with cards.
+Eat Express is a app inspired by iFood. It offers easy food ordering with category browsing, detailed restaurant and product pages. Built with Next.js and Prisma for fast performance and reliable data management.
 
 </h3>
 
